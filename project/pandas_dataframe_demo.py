@@ -50,7 +50,7 @@ df.loc[:,'one']#选取one列的数据
 
 df.iloc[行位置,列位置]
 df.iloc[1,1]#选取第二行，第二列的值，返回的为单个值
-df.iloc[0,2],:]#选取第一行及第三行的数据
+df.iloc[[0,2],:]#选取第一行及第三行的数据
 df.iloc[0:2,:]#选取第一行到第三行（不包含）的数据
 df.iloc[:,1]#选取所有记录的第一列的值，返回的为一个Series
 df.iloc[1,:]#选取第一行数据，返回的为一个Series
@@ -72,7 +72,7 @@ df.apply(lambda x: x.max() - x.min())#将一个函数应用到DataFrame的每一
 df.set_index('one')
 #设置索引
 
-df.rename(columns=(u'one':'1'), inplace=True)
+df.rename(columns=('one':'1'), inplace=True)
 #重命名列
 
 df.dtypes
